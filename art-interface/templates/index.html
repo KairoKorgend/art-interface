@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/art-interface/assets/css/style.css" />
+    <title>Art-interface</title>
+  </head>
+  <body>
+    <form action="/decoder" class="container" method="POST">
+      <div class="form-control">
+        <label for="type">Functionality:</label>
+        <select id="type" name="typeValue">
+          <option value="decode">Decode</option>
+          <option value="encode">Encode</option>
+        </select>
+      </div>
+      <div class="form-control">
+        <label for="input-text">Text:</label>
+        <textarea id="input-text" name="textValue" rows="4"></textarea>
+      </div>
+      <div class="form-control">
+        <button type="submit">Generate</button>
+      </div>
+      <div class="art-container">
+        <p class="result-text">{{.Result}}</p>
+      </div>
+    </form>
+  </body>
+</html>
